@@ -23,7 +23,7 @@ a {
 
 .et-hero-tabs h1 span{
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px rgb(117, 14, 33);
+    -webkit-text-stroke: 2px rgb(255,223,0);
 }
 
 .et-hero-tabs h1 {
@@ -69,14 +69,14 @@ a {
 
 .et-hero-tab:hover {
   color: rgb(255, 255, 255);
-  background: rgb(117, 14, 33);
+  background: 	rgb(56,56,56);
 }
 
 .et-hero-tab-slider {
   position: absolute;
   bottom: 0;
   height: 6px;
-  background: rgb(117, 14, 33);
+  background: rgb(255,223,0);
   transition: left 0.3s ease;
 }
 
