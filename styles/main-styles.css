@@ -21,10 +21,10 @@ a {
   padding: 0 2em;
 }
 
-.et-hero-tabs h1 span{
+/* .et-hero-tabs h1 span{
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px rgb(255,223,0);
-}
+} */
 
 .et-hero-tabs h1 {
   font-size: 2rem;
