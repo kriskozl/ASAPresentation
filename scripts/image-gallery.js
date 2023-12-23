@@ -27,7 +27,6 @@ const checkOverlap = () => {
         textContainer.classList.remove('hidden');
     }
 
-    // Use requestAnimationFrame to continuously check for overlap
     requestAnimationFrame(checkOverlap);
 };
 
@@ -67,6 +66,5 @@ window.onmouseup = handleOnUp;
 window.ontouchend = handleOnUp;
 window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
-
 // Start the continuous overlap check
 checkOverlap();
