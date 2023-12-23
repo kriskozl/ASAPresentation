@@ -7,6 +7,12 @@
   --toggle-color-dark: rgb(255, 255, 255);
 }
 
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --toggle-active-color: rgb(0, 0, 0);
+}
+
 body.dark-theme .mode-tog {
   background-color: var(--toggle-color-dark);
 }
@@ -37,12 +43,6 @@ body.dark-theme .mode-tog {
 
 .mode-tog.active {
   background-color: var(--toggle-active-color);
-}
-
-.dark-theme {
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --toggle-active-color: rgb(0, 0, 0);
 }
 
 .et-hero-tab,
