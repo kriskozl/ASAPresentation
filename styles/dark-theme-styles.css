@@ -24,7 +24,6 @@ body.dark-theme .mode-tog {
 
 .mode-tog {
   background-color: var(--toggle-color);
-  background-color: var(--toggle-color-light);
   position: absolute;
   right: 50px;
   top: 50px;
