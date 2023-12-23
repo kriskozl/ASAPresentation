@@ -1,5 +1,9 @@
 const track = document.getElementById("image-track");
-const handleOnDown = (e) => (track.dataset.mouseDownAt = e.clientX);
+const textContainer = document.getElementById('text-container');
+
+const handleOnDown = (e) => {
+    track.dataset.mouseDownAt = e.clientX;
+};
 
 const handleOnUp = () => {
     track.dataset.mouseDownAt = "0";
@@ -33,6 +37,23 @@ const handleOnMove = (e) => {
             },
             { duration: 1200, fill: "forwards" }
         );
+    }
+
+    // Check if the image track overlaps with the text container
+    const trackRect = track.getBoundingClientRect();
+    const textRect = textContainer.getBoundingClientRect();
+
+    if (
+        trackRect.right > textRect.left &&
+        trackRect.left < textRect.right &&
+        trackRect.bottom > textRect.top &&
+        trackRect.top < textRect.bottom
+    ) {
+        // If they overlap, hide the text
+        textContainer.classList.add('hidden');
+    } else {
+        // If they don't overlap, show the text
+        textContainer.classList.remove('hidden');
     }
 };
 

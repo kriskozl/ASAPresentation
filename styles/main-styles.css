@@ -85,6 +85,14 @@ a {
   transition: left 0.3s ease;
 }
 
+#text-container {
+  position: absolute;
+  right: 65%; 
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
 @media (min-width: 800px) {
   .et-hero-tabs h1 {
     font-size: 3rem;
