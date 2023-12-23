@@ -36,7 +36,7 @@ a {
 .et-hero-tabs h3 {
   font-size: 1rem;
   letter-spacing: 0.3rem;
-  /* opacity: 0.6; */
+  opacity: 0.6;
 }
 
 .et-hero-tabs-container {

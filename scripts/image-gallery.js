@@ -3,7 +3,7 @@ const handleOnDown = (e) => (track.dataset.mouseDownAt = e.clientX);
 
 const handleOnUp = () => {
     track.dataset.mouseDownAt = "0";
-    track.dataset.prevPercentage = track.dataset.percentage;
+    track.dataset.prevPercentage = track.dataset.percentage || "0";
 };
 
 const handleOnMove = (e) => {
@@ -38,7 +38,7 @@ const handleOnMove = (e) => {
 
 window.onmousedown = (e) => handleOnDown(e);
 window.ontouchstart = (e) => handleOnDown(e.touches[0]);
-window.onmouseup = (e) => handleOnUp(e);
-window.ontouchend = (e) => handleOnUp(e.touches[0]);
+window.onmouseup = handleOnUp;
+window.ontouchend = handleOnUp;
 window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
