@@ -43,12 +43,11 @@ const handleOnMove = (e) => {
     const trackRect = track.getBoundingClientRect();
     const textRect = textContainer.getBoundingClientRect();
 
-    if (
-        trackRect.right > textRect.left &&
-        trackRect.left < textRect.right &&
-        trackRect.bottom > textRect.top &&
-        trackRect.top < textRect.bottom
-    ) {
+    const overlap = !(trackRect.right < textRect.left ||
+        trackRect.left > textRect.right ||
+        trackRect.bottom < textRect.top ||
+        trackRect.top > textRect.bottom);
+    if (overlap) {
         // If they overlap, hide the text
         textContainer.classList.add('hidden');
     } else {
