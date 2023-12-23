@@ -2,8 +2,15 @@ body,
 html {
   font-family: "Century Gothic", "Lato", sans-serif;
   margin: 0;
-  overflow: hiddenY;
   background-color: white;
+}
+
+:root {
+  --navbar-background-color: #ffffff;
+}
+
+.dark-theme {
+  --navbar-background-color: #121212;
 }
 
 a {
@@ -21,11 +28,6 @@ a {
   text-align: center;
   padding: 0 2em;
 }
-
-/* .et-hero-tabs h1 span {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px #000000;
-} */
 
 .et-hero-tabs h1 {
   font-size: 2rem;
@@ -47,9 +49,9 @@ a {
   width: 100%;
   height: 70px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  /* background of nav */
-  /* background: #ffffff; */
+  background: var(--navbar-background-color);
   z-index: 10;
+  transition: background-color 0.5s ease;
 }
 
 .et-hero-tabs-container--top {
@@ -62,7 +64,6 @@ a {
   justify-content: center;
   align-items: center;
   flex: 1;
-  /* nav font color */
   color: #000000;
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
@@ -70,24 +71,21 @@ a {
 }
 
 .et-hero-tab:hover {
-  /* color when hovered */
   color: rgb(0, 0, 0);
-  /* backgorund of nav hover effect */
-  background: #45474B;
+  background: #45474b;
 }
 
 .et-hero-tab-slider {
   position: absolute;
   bottom: 0;
   height: 6px;
-  /* under tab color when selected */
-  background: #F4CE14;
+  background: #f4ce14;
   transition: left 0.3s ease;
 }
 
 #text-container {
   position: absolute;
-  right: 65%; 
+  right: 65%;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
