@@ -73,7 +73,7 @@ a {
   /* color when hovered */
   color: rgb(0, 0, 0);
   /* backgorund of nav hover effect */
-  background: #3d3c3c;
+  background: #45474B;
 }
 
 .et-hero-tab-slider {
@@ -81,7 +81,7 @@ a {
   bottom: 0;
   height: 6px;
   /* under tab color when selected */
-  background: rgb(0, 0, 0);
+  background: #F4CE14;
   transition: left 0.3s ease;
 }
 
