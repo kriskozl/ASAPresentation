@@ -1,0 +1,99 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --transition-time: 0.35s;
+}
+
+.video-gallery {
+  font-family: "Century Gothic", "Lato", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-gap: 15px;
+  max-width: 1100px; /* increase to get more col */
+  padding: 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.video-gallery .gallery-item {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: var(--black);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-gallery .gallery-item img {
+  position: relative;
+  display: block;
+  width: 115%;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: all var(--transition-time) ease-in-out;
+  transform: translate3d(-23px, 0, 0);
+}
+
+.video-gallery .gallery-item .gallery-item-caption,
+.video-gallery .gallery-item .gallery-item-caption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  font-size: 1em;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.video-gallery .gallery-item h2,
+.video-gallery .gallery-item p {
+  position: relative;
+  margin: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.video-gallery .gallery-item h2 {
+  font-weight: 300;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.video-gallery .gallery-item h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 1px;
+  background: var(--white);
+  transition: transform var(--transition-time);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.video-gallery .gallery-item p {
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 12px 0;
+  opacity: 0;
+  transition: opacity var(--transition-time), transform var(--transition-time);
+  transform: translate3d(10%, 0, 0);
+}
+
+.video-gallery .gallery-item:hover img {
+  opacity: 0.3;
+  transform: translate3d(0, 0, 0);
+}
+
+.video-gallery .gallery-item:hover h2::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.video-gallery .gallery-item:hover p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
