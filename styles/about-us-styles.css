@@ -2,7 +2,15 @@ body.dark-theme #tab-about-us {
   color: #fff;
 }
 
-.about-nav section {
+.content > section {
+  display: none;
+}
+
+.content section section {
+  display: none;
+}
+
+#tab-about-us .section {
   display: none;
 }
 
