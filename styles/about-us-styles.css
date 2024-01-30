@@ -1,0 +1,55 @@
+body.dark-theme #tab-about-us {
+  color: #fff;
+}
+
+.about-nav section {
+  display: none;
+}
+
+.section-nav li.active > a {
+  color: #333;
+  font-weight: 500;
+}
+
+.section-nav {
+  padding-left: 0;
+  border-left: 1px solid #efefef;
+}
+
+.section-nav a {
+  text-decoration: none;
+  display: block;
+  padding: 0.125rem 0;
+  color: #ccc;
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  color: #666;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin-left: 1rem;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+/** page layout **/
+#tab-about-us {
+  display: grid;
+  text-align: left;
+  grid-template-columns: 1fr 15em;
+  max-width: 100em;
+  width: 90%;
+  margin: 0 auto;
+  align-items: start;
+  padding-top: 80px;
+}
